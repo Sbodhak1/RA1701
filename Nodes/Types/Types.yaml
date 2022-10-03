@@ -1,0 +1,203 @@
+Name: Types
+Type: FolderType
+Children:
+- Name: Calendar_RollersType
+  Id: g=ab5e1e450210042a8ff8e26def274dcd
+  Supertype: BaseObjectType
+  Children:
+  - Name: Alias1
+    Type: Alias
+    DataType: NodeId
+    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"70bd9424fca5bbb042604d472d771963","Namespace":4}
+  - Name: CrownCylinderForce
+    Type: AnalogItemType
+    DataType: Float
+    Value: 0.0
+    Children:
+    - Name: EURange
+      Type: RangeType
+      DataType: EURange
+      Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+      Children:
+      - Name: Low
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 4.0
+      - Name: High
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 450.0
+    - Name: EngineeringUnits
+      Type: EUInformationType
+      DataType: EUInformation
+      Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+      Children:
+      - Name: UnitId
+        Type: BaseVariableType
+        DataType: Int32
+        ReferenceType: HasProperty
+        Value: 4404534
+      - Name: DisplayName
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Description
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: DynamicLink
+      Type: DataBind
+      DataType: NodePath
+      Value: "../Alias1/CrownCylinderForce"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DataBindModeType
+        ModellingRule: Optional
+        Value: 2
+  - Name: GapDistance
+    Type: AnalogItemType
+    DataType: Float
+    Value: 0.0
+    Children:
+    - Name: EURange
+      Type: RangeType
+      DataType: EURange
+      Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+      Children:
+      - Name: Low
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 0.0
+      - Name: High
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 5.0
+      - Name: Constrain
+        Type: BaseVariableType
+        DataType: Boolean
+        ReferenceType: HasProperty
+        ModellingRule: Optional
+        Value: false
+    - Name: EngineeringUnits
+      Type: EUInformationType
+      DataType: EUInformation
+      Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+      Children:
+      - Name: UnitId
+        Type: BaseVariableType
+        DataType: Int32
+        ReferenceType: HasProperty
+        Value: 5066068
+      - Name: DisplayName
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Description
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: DynamicLink
+      Type: DataBind
+      DataType: NodePath
+      Value: "../Alias1/GapDistance"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DataBindModeType
+        ModellingRule: Optional
+        Value: 2
+  - Name: CrownDisplacement
+    Type: AnalogItemType
+    DataType: Float
+    Value: 0.0
+    Children:
+    - Name: EURange
+      Type: RangeType
+      DataType: EURange
+      Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+      Children:
+      - Name: Low
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 0.0
+      - Name: High
+        Type: BaseVariableType
+        DataType: Double
+        ReferenceType: HasProperty
+        Value: 5.0
+    - Name: EngineeringUnits
+      Type: EUInformationType
+      DataType: EUInformation
+      Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"","unitId":0,"displayName":{"NamespaceIndex":-1,"LocaleId":"","Text":""},"description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}
+      Children:
+      - Name: UnitId
+        Type: BaseVariableType
+        DataType: Int32
+        ReferenceType: HasProperty
+        Value: 5066068
+      - Name: DisplayName
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Description
+        Type: BaseVariableType
+        DataType: LocalizedText
+        ReferenceType: HasProperty
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: DynamicLink
+      Type: DataBind
+      DataType: NodePath
+      Value: "../Alias1/CrownDisplacement"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DataBindModeType
+        ModellingRule: Optional
+        Value: 2
+- Name: Calendar_Rollers
+  Id: g=70bd9424fca5bbb042604d472d771963
+  Supertype: TagStructure
+  Children:
+  - Name: CrownCylinderForce
+    Type: LogixTag
+    DataType: Float
+    Value: 0.0
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "CrownCylinderForce"
+  - Name: CrownDisplacement
+    Type: LogixTag
+    DataType: Float
+    Value: 0.0
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "CrownDisplacement"
+  - Name: GapDistance
+    Type: LogixTag
+    DataType: Float
+    Value: 0.0
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "GapDistance"
